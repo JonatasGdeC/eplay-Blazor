@@ -1,16 +1,16 @@
 @page "/produto/{NameGame}/{Id}"
 @inject HttpClient Http;
 
-<PageTitle>EPLAY - Nome do jogo</PageTitle>
-
 @if(jogo == null)
 {
+    <PageTitle>EPLAY</PageTitle>
     <div class="loadingPage">
         <MudProgressCircular Style="height:150px;width:150px; color: #333" Indeterminate="true" />
     </div>
 }
 else
 {
+    <PageTitle>EPLAY - @jogo[0]?.name</PageTitle>
     <Header />
     <Hero BannerGame="@jogo[0]?.media.cover"
           Category="@jogo[0]?.details.category"
