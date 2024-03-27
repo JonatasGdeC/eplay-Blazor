@@ -1,0 +1,127 @@
+<div style="background-color: @(backgroundSection == BackgroundSection.Primary ? "#333" : "#111")">
+  <div class="container">
+    <h3 class="titleSection">@TitleSection</h3>
+    @if(typeDivision == TypeDivision.ForGames){
+      <div class="games">
+      @if(Jogos == null){
+         <p>Carregando...</p>   
+      } else{
+        @foreach(Jogos jogo in Jogos){
+          <CardGame
+            backgroundCard="backgroundSection"
+            ImageGame="@jogo.media.thumbnail"
+            NameGame="@jogo.name"
+            Description="@jogo.description"
+            Discount="@jogo.prices.discount"
+            Price="@jogo.prices.current"
+            DateLaunch="@jogo.release_date"
+            Category="@jogo.details.category"
+            System="@jogo.details.system"
+          />
+        }
+      }
+    </div>
+    }
+    @if(typeDivision == TypeDivision.ForTexts){
+      <p class="about">
+        @About
+      </p>
+    }
+    @if(typeDivision == TypeDivision.ForInfos){
+      <p class="about">
+        <b>Plataforma: </b>@System <br/>
+        <b>Desenvolvedor: </b>@Developer <br/>
+        <b>Editora: </b>@Publisher <br/>
+        <b>Idiomas: </b>@Languages
+      </p>
+    }
+    @if(typeDivision == TypeDivision.ForImages){
+      <div class="gallery">
+        @for(int i = 0; i < 4; i++){
+          <Gallery/>
+        }
+      </div>
+    }
+  </div>
+</div>
+
+@code{
+    [Parameter]
+    public string? TitleSection { get; set; }
+
+    public enum BackgroundSection
+    {
+        Primary,
+        Secundary
+    }
+
+    [Parameter]
+    public BackgroundSection backgroundSection { get; set; } = BackgroundSection.Primary;
+
+    public enum TypeDivision
+    {
+        ForGames,
+        ForTexts,
+        ForInfos,
+        ForImages
+    }
+
+    [Parameter]
+    public TypeDivision typeDivision { get; set; } = TypeDivision.ForGames;
+
+    [Parameter]
+    public List<Jogos>? Jogos { get; set; }
+
+    [Parameter]
+    public string? About { get; set; }
+
+    [Parameter]
+    public string? System {get;set;}
+
+    [Parameter]
+    public string? Developer {get;set;}
+
+    [Parameter]
+    public string? Publisher {get; set;}
+
+    [Parameter]
+    public string[]? Languages {get; set;}
+}
+
+<style>
+  .titleSection{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 32px 0 40px;
+    color: #fff;
+  }
+
+  .games{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding-bottom: 32px;
+
+    @@media(max-width: 1024px){
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @@media(max-width: 768px){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about{
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #fff;
+  }
+
+  .gallery{
+    display: flex;
+    gap: 16px;
+    padding-bottom: 72px;
+  }
+</style>

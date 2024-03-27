@@ -1,0 +1,55 @@
+<div class="hero" style="background-image:url(/images/image-banner.png)">
+  <div class="container">
+    <div class="heroTags">
+      <Tag Size="Tag.TypeTag.Secundary" Text="RPG"/>
+      <Tag Size="Tag.TypeTag.Secundary" Text="PS5"/>
+    </div>
+    <div class="priceGame">
+      <h2>Nome do jogo</h2>
+      <p>
+        <span>De R$ 290,00</span> <br/>
+        Por R$ 190,90 
+      </p>
+      <Button BackgroundColor="Button.ButtonStyle.Secondary" TextButton="Adicionar ao carrinho" />
+    </div>
+  </div>
+</div>
+
+
+<style>
+  .hero{
+    position: relative;
+    width: 100%;
+    height: 480px;
+
+      .heroTags{
+        display: flex;
+        gap: 8px;
+        padding-top: 20px;
+      }
+
+      .priceGame{
+        position: absolute;
+        bottom: 0;
+        padding: 16px;
+        display: inline-block;
+        background-color: #111;
+        color: #fff;
+
+        h2{
+          font-size: 32px;
+          font-weight: bold;
+        }
+
+        p{
+          font-size: 18px;
+          font-weight: bold;
+          padding: 16px 0;
+
+          span{
+            text-decoration: line-through;
+          }
+        }
+      }
+    }
+</style>

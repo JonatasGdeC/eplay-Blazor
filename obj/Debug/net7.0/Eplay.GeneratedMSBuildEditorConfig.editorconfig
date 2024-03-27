@@ -1,0 +1,83 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Eplay
+build_property.RootNamespace = Eplay
+build_property.ProjectDir = G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay
+build_property._RazorSourceGeneratorDebug = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/App.razor]
+build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Banner.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCYW5uZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Button.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xCdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/CardGame.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDYXJkR2FtZS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Division.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xEaXZpc2lvbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Footer.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xGb290ZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Gallery.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xHYWxsZXJ5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Header.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIZWFkZXIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Hero.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xIZXJvLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Components/Tag.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Pages/Categorias.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmlhcy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Pages/Index.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Pages/Produto.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0by5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Pages/_Host.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX0hvc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

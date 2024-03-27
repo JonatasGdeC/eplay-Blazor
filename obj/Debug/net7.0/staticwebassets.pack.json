@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\eplay-logo.svg",
+      "PackagePath": "staticwebassets\\images\\eplay-logo.svg"
+    },
+    {
+      "Id": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\image-banner.png",
+      "PackagePath": "staticwebassets\\images\\image-banner.png"
+    },
+    {
+      "Id": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\image-game.png",
+      "PackagePath": "staticwebassets\\images\\image-game.png"
+    },
+    {
+      "Id": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\zoom.png",
+      "PackagePath": "staticwebassets\\images\\zoom.png"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Eplay.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Eplay.props",
+      "PackagePath": "build\\Eplay.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Eplay.props",
+      "PackagePath": "buildMultiTargeting\\Eplay.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Eplay.props",
+      "PackagePath": "buildTransitive\\Eplay.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

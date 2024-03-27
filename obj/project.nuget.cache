@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "MeJs6H/KAEADldSDGb4KQl8NPoLPcKZubTCRMkSPq1+Wr+kfqp0rvoQUdD8/IpN+wOOqymUTEV76OpMG5E85Qw==",
+  "success": true,
+  "projectFilePath": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\Eplay.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
+    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+  ],
+  "logs": []
+}

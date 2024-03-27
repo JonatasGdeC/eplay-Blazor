@@ -1,0 +1,116 @@
+@using static Components.Division
+@using static Components.Tag
+
+<a href="/produto" class="card" style="background-color: @((backgroundCard == BackgroundSection.Primary) ? "#111" : "#333")">
+   <div class="cardImg">
+      <img src="@ImageGame" alt="Alternate Text" />
+      <div class="imgTag">
+        @if(DateLaunch != null){
+          <Tag Size=TypeTag.Secundary Text="@DateLaunch"/>
+        }
+
+        @if(Discount != null){
+          <Tag Size=TypeTag.Secundary Text="@FormatUtils.ConvertePorcentagem(Discount)"/>
+        }
+
+        @if(Price != null){
+          <Tag Size=TypeTag.Secundary Text="@FormatUtils.ConverteValor(Price)"/>
+        }
+      </div>
+   </div>
+   <h4>@NameGame</h4>
+   <div>
+        <Tag Size=TypeTag.Secundary Text="@Category" />
+        <Tag Size=TypeTag.Secundary Text="@System" />
+   </div>
+   <p>@Resumindo(Description)</p>
+</a>
+
+@code {
+    [Parameter]
+    public BackgroundSection backgroundCard { get; set; }
+
+    [Parameter]
+    public string? ImageGame { get; set; }
+
+    [Parameter]
+    public string? NameGame { get; set; }
+
+    [Parameter]
+    public string? Description { get; set; }
+
+    [Parameter]
+    public int? Discount { get; set; }
+
+    [Parameter]
+    public float? Price { get; set; }
+
+    [Parameter]
+    public string? DateLaunch { get; set; }
+
+    [Parameter]
+    public string? Category { get; set; }
+
+    [Parameter]
+    public string? System { get; set; }
+
+
+    public string Resumindo(string descricao)
+    {
+        if(descricao.Length > 95)
+        {
+            return descricao.Substring(0, 92) + "...";
+        }
+
+        return descricao;
+    }
+}
+
+<style>
+  .card{
+    padding: 8px;
+    border-radius: 8px;
+    color: #fff;
+    transition: all ease 0.3s;
+
+    &:hover{
+      scale: 1.03;
+    }
+
+    .cardImg{
+      position: relative;
+
+      img{
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .imgTag{
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 8px;
+      }
+    }
+
+    h4{
+      font-size: 16px;
+      font-weight: bold;
+      margin: 16px 0 8px;
+    }
+
+    div{
+      display: flex;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    p{
+      font-size: 14px;
+      line-height: 22px; 
+    }
+  }
+</style>
+

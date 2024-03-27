@@ -1,0 +1,74 @@
+<div class="footer">
+  <div class="container">
+    <h5>Categorias</h5>
+    <ul>
+      <li>
+        <NavLink href="/categorias/#acao">Ação</NavLink>
+      </li>
+      <li>
+        <NavLink href="/categorias/#esporte">Esporte</NavLink>
+      </li>
+      <li>
+        <NavLink href="/categorias/#luta">Luta</NavLink>
+      </li>
+       <li>
+         <NavLink href="/categorias/#rpg">RPG</NavLink>
+      </li>
+      <li>
+        <NavLink href="/categorias/#simulacao">Simulação</NavLink>
+      </li>
+    </ul>
+    <h5>Acesso rápido</h5>
+    <ul>
+      <li>
+        <NavLink href="/#promocoes">Promoções</NavLink>
+      </li>
+      <li>
+        <NavLink href="/#em-breve">Em breve</NavLink>
+      </li>
+    </ul>
+    <p>@AnoAtual - &copy; E-PLAY Todos os direitos reservados</p>
+  </div>
+</div>
+
+@code{
+    public int AnoAtual = DateTime.Now.Year;
+}
+
+<style>
+  .footer{
+    background-color: #333;
+    padding: 32px 0;
+
+    h5{
+      font-size: 16px;
+      font-weight: bold;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    ul{
+      display: flex;
+      gap: 8px;
+      margin-bottom: 64px;
+
+      li{
+        a{
+          font-size: 14px;
+          color: #fff;
+          opacity: 0.7;
+          transition: all ease 0.3s;
+
+          &:hover{
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    p{
+      margin-top: 16px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
+</style>
