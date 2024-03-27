@@ -1,4 +1,4 @@
-<div class="imgGallery" style="background-image: url(/images/image-game.png)" title="Clique aqui para abrir a imagem" @onclick="AbreModal">
+<div class="imgGallery" style="background-image: url(@ImgGame)" title="Clique aqui para abrir a imagem de @NameGame" @onclick="AbreModal">
     <div class="overlay"/>
     <img class="iconZoom" src="./images/zoom.png" alt="Clique aqui para abrir a imagem" />
 </div>
@@ -7,10 +7,10 @@
   <div class="overlayModal" @onclick="FechaModal"/>
   <div class="modalContant">
     <header>
-      <h4>Nome do jogo</h4>
+      <h4>@NameGame</h4>
       <h4 class="btnClose" @onclick="FechaModal">X</h4>
     </header>
-    <img src="./images/image-banner.png" alt="Alternate Text" />  
+    <img src="@ImgGame" alt="Imagem de @NameGame" />  
   </div>
 </div>
 
@@ -23,6 +23,17 @@
 
     private void FechaModal(){
         modalOpen = false;
+    }
+
+    [Parameter]
+    public string? NameGame {get; set;}
+
+    [Parameter]
+    public string? ImgGame {get;set;}
+
+    public enum GalleryType {
+      image,
+      video
     }
 }
 

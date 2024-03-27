@@ -1,4 +1,4 @@
-@page "/produto/{Id}"
+@page "/produto/{NameGame}/{Id}"
 @inject HttpClient Http;
 
 <PageTitle>EPLAY - Nome do jogo</PageTitle>
@@ -30,18 +30,22 @@ else
               System="@jogo[0]?.details.system"
               Developer="@jogo[0]?.details.developer"
               Publisher="@jogo[0]?.details.publisher"
-              Languages=@jogo[0]?.details.languages />
+              Languages="@jogo[0]?.details.languages" />
 
     <Division TitleSection="Galeria"
               typeDivision="Division.TypeDivision.ForImages"
-              backgroundSection="Division.BackgroundSection.Secundary" />
+              backgroundSection="Division.BackgroundSection.Secundary"
+              Gallery="@jogo[0]?.media.gallery"/>
 
     <Footer />
 }
 
 @code{
-  [Parameter]
-  public string? Id { get; set; }
+    [Parameter]
+    public string? Id { get; set; }
+
+    [Parameter]
+    public string? NameGame { get; set; }
 
   private Jogos[]? jogo;
 

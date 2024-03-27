@@ -1,3 +1,4 @@
+@using static eplay.Models.eplay.Jogos
 <div style="background-color: @(backgroundSection == BackgroundSection.Primary ? "#333" : "#111")">
   <div class="container">
     <h3 class="titleSection">@TitleSection</h3>
@@ -37,17 +38,32 @@
       </p>
     }
     @if(typeDivision == TypeDivision.ForInfos){
-      <p class="about">
-        <b>Plataforma: </b>@System <br/>
-        <b>Desenvolvedor: </b>@Developer <br/>
-        <b>Editora: </b>@Publisher <br/>
-        <b>Idiomas: </b>@Languages
-      </p>
+      <div class="about">
+        <p>
+          <b>Plataforma: </b>@System
+        </p>
+        <p>
+          <b>Desenvolvedor: </b>@Developer
+        </p>
+        <p>
+          <b>Editora: </b>@Publisher
+        </p>
+        <p>
+          <b>Idiomas: </b>O jogo oferece suporte a diversos idiomas, incluindo
+                @foreach(string language in Languages)
+                {
+                    <span>@language,&nbsp</span>
+                }
+          entre outros. As opções de áudio e legendas podem ser ajustadas nas configurações do jogo.
+        </p>
+      </div>
     }
     @if(typeDivision == TypeDivision.ForImages){
       <div class="gallery">
-        @for(int i = 0; i < 4; i++){
-          <Gallery/>
+        @foreach(var item in Gallery){
+          if(item.type == "image"){
+            <Gallery ImgGame="@item.url" />
+          }
         }
       </div>
     }
@@ -95,6 +111,9 @@
 
     [Parameter]
     public string[]? Languages {get; set;}
+
+    [Parameter]
+    public GalleryObject[]? Gallery { get; set; }
 }
 
 <style>

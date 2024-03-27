@@ -31,10 +31,10 @@ namespace eplay.Models.eplay
 		{
 			public string? thumbnail { get; set; }
 			public string? cover { get; set; }
-			public Gallery[]? gallery { get; set; }
+			public GalleryObject[]? gallery { get; set; }
 		}
 
-		public class Gallery
+		public class GalleryObject
 		{
 			public string? type { get; set; }
 			public string? url { get; set; }
