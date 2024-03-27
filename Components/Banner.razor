@@ -7,14 +7,16 @@
       </div>
 	  <div class="more_information">
 		  <div class="about_game">
-			  <h2>@TitleGame</h2>
+			  <h2>@NameGame</h2>
 			  <h4>
                     <span>De @FormatUtils.ConverteValor(OldPrice)</span> <br />
                     por apenas @FormatUtils.ConverteValor(NewPrice)
 			  </h4>
 		  </div>
 	  </div>
-	  <Button TextButton="Aproveitar" BackgroundColor="Button.ButtonStyle.Primary" />
+      <a href="/produto/@NameGame/@Id">
+	    <Button TextButton="Aproveitar" BackgroundColor="Button.ButtonStyle.Primary" />
+      </a>
     </div>
 </div>
 
@@ -22,11 +24,13 @@
     [Parameter]
     public string? ImageGame { get; set; }
     [Parameter]
-    public string? TitleGame { get; set; }
+    public string? NameGame { get; set; }
     [Parameter]
     public double? OldPrice { get; set; }
     [Parameter]
     public double? NewPrice { get; set; }
+    [Parameter]
+    public string? Id { get; set; }
 }
 
 <style>

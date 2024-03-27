@@ -14,21 +14,26 @@ else
     <Header/>
     <Banner
       ImageGame="@jogosEmDestaque[0]?.media.cover"
-      TitleGame="@jogosEmDestaque[0]?.name"
+      NameGame="@jogosEmDestaque[0]?.name"
       OldPrice="@jogosEmDestaque[0]?.prices.old"
       NewPrice="@jogosEmDestaque[0]?.prices.current"
+      Id="@jogosEmDestaque[0]?.id.ToString()"
     />
 
-    <Division
-      TitleSection="Promoções"
-      Jogos="@promocoes"
-    />
+    <div id="promocoes">
+      <Division
+        TitleSection="Promoções"
+        Jogos="@promocoes"
+      />
+    </div>
 
-    <Division
-      backgroundSection="Division.BackgroundSection.Secundary"
-      TitleSection="Em breve"
-      Jogos="@emBreve"
-    />
+    <div id="em-breve">
+      <Division
+        backgroundSection="Division.BackgroundSection.Secundary"
+        TitleSection="Em breve"
+        Jogos="@emBreve"
+      />
+    </div>
 
     <Footer />
 }

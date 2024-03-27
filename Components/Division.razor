@@ -64,6 +64,9 @@
           if(item.type == "image"){
             <Gallery ImgGame="@item.url" />
           }
+          else{
+            <Gallery type="Components.Gallery.GalleryType.video" ImgGame="@BannerGame" LinkVideo="@item.url"/>
+          }
         }
       </div>
     }
@@ -114,6 +117,9 @@
 
     [Parameter]
     public GalleryObject[]? Gallery { get; set; }
+
+    [Parameter]
+    public string? BannerGame { get; set; }
 }
 
 <style>

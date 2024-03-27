@@ -1,6 +1,11 @@
 <div class="imgGallery" style="background-image: url(@ImgGame)" title="Clique aqui para abrir a imagem de @NameGame" @onclick="AbreModal">
     <div class="overlay"/>
-    <img class="iconZoom" src="./images/zoom.png" alt="Clique aqui para abrir a imagem" />
+    @if(type == GalleryType.image)
+    {
+      <img class="iconZoom" src="./images/zoom.png" alt="Clique aqui para abrir a imagem" />  
+    }else{
+      <img class="iconZoom" src="./images/play.png" alt="Clique aqui para abrir a imagem" /> 
+    }
 </div>
 
 <div class="@(modalOpen ? "modal" : "is--close")" >
@@ -10,7 +15,11 @@
       <h4>@NameGame</h4>
       <h4 class="btnClose" @onclick="FechaModal">X</h4>
     </header>
-    <img src="@ImgGame" alt="Imagem de @NameGame" />  
+    @if(type == GalleryType.image){
+      <img src="@ImgGame" alt="Imagem de @NameGame" />  
+    } else {
+      <iframe src="@LinkVideo" /> 
+    }
   </div>
 </div>
 
@@ -35,6 +44,12 @@
       image,
       video
     }
+
+    [Parameter]
+    public GalleryType type {get;set;} = GalleryType.image;
+
+    [Parameter]
+    public string? LinkVideo {get; set;}
 }
 
 <style>
@@ -131,8 +146,11 @@
             }
           }
 
-          img{
+          img, iframe{
+            max-width: 960px;
             width: 100%;
+            height: 480px;
+            object-fit: cover;
           }
         }
     }

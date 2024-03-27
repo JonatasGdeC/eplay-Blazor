@@ -17,6 +17,10 @@
       "PackagePath": "staticwebassets\\images\\image-game.png"
     },
     {
+      "Id": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\play.png",
+      "PackagePath": "staticwebassets\\images\\play.png"
+    },
+    {
       "Id": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\zoom.png",
       "PackagePath": "staticwebassets\\images\\zoom.png"
     },

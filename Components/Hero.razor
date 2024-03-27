@@ -6,13 +6,15 @@
     </div>
     <div class="priceGame">
       <h2>@NameGame</h2>
-      <p>
+      <div>
         @if(OldPrice != null){
           <span>De @FormatUtils.ConverteValor(OldPrice)</span> <br/>
         }
-        Por @FormatUtils.ConverteValor(NewPrice) 
-      </p>
-      <Button BackgroundColor="Button.ButtonStyle.Secondary" TextButton="Adicionar ao carrinho" />
+        @if(NewPrice != null){
+          <p>Por @FormatUtils.ConverteValor(NewPrice)</p> 
+          <Button BackgroundColor="Button.ButtonStyle.Secondary" TextButton="Adicionar ao carrinho" />
+        }
+      </div>
     </div>
   </div>
 </div>
@@ -47,24 +49,28 @@
 
       .heroTags{
         display: flex;
+        position: absolute;
         gap: 8px;
         padding-top: 20px;
-      }
+        z-index: 1;
+    }
 
       .priceGame{
+        display: inline-block;
+        padding: 16px;
+        width: 285px;
         position: absolute;
         bottom: 0;
-        padding: 16px;
-        display: inline-block;
         background-color: #111;
         color: #fff;
+        z-index: 1;
 
         h2{
           font-size: 32px;
           font-weight: bold;
         }
 
-        p{
+        div{
           font-size: 18px;
           font-weight: bold;
           padding: 16px 0;
@@ -72,7 +78,22 @@
           span{
             text-decoration: line-through;
           }
+
+          button{
+            margin-top: 16px;
+            border: none;
+          }
         }
       }
+
+    &::after {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        content: '';
+    }
     }
 </style>

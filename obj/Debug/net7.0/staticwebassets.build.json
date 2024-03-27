@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "0GFcKjdJhtppL1iSElBAmjsfF4E7rjRqqYc2O1TxRb0=",
+  "Hash": "mZ+XMMMP7DtaeKiloRDYizI8jeBnxPDofiJ4FNyh634=",
   "Source": "Eplay",
   "BasePath": "_content/Eplay",
   "Mode": "Default",
@@ -129,6 +129,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\image-game.png"
+    },
+    {
+      "Identity": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\play.png",
+      "SourceId": "Eplay",
+      "SourceType": "Discovered",
+      "ContentRoot": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\",
+      "BasePath": "_content/Eplay",
+      "RelativePath": "images/play.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\play.png"
     },
     {
       "Identity": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\wwwroot\\images\\zoom.png",
