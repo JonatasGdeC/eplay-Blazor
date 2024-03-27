@@ -1,22 +1,35 @@
-﻿@page "/"
+@page "/"
 @inject HttpClient Http;
 
 <PageTitle>EPLAY - A sua loja de Games</PageTitle>
 
 @if (jogosEmDestaque == null)
 {
-    <p>Carregando...</p>
+    <div class="loadingPage">
+      <MudProgressCircular Style="height:150px;width:150px; color: #333" Indeterminate="true" />
+    </div>
 }
 else
 {
     <Header/>
-    <Banner ImageGame="@jogosEmDestaque[0]?.media.cover" TitleGame="@jogosEmDestaque[0]?.name" OldPrice="@jogosEmDestaque[0]?.prices.old" NewPrice="@jogosEmDestaque[0]?.prices.current" />
-    <div id="promocoes">
-        <Division TitleSection="Promoções" Jogos="@promocoes" />
-    </div>
-    <div id="em-breve">
-        <Division backgroundSection="Division.BackgroundSection.Secundary" TitleSection="Em breve" Jogos="@emBreve" />
-    </div>
+    <Banner
+      ImageGame="@jogosEmDestaque[0]?.media.cover"
+      TitleGame="@jogosEmDestaque[0]?.name"
+      OldPrice="@jogosEmDestaque[0]?.prices.old"
+      NewPrice="@jogosEmDestaque[0]?.prices.current"
+    />
+
+    <Division
+      TitleSection="Promoções"
+      Jogos="@promocoes"
+    />
+
+    <Division
+      backgroundSection="Division.BackgroundSection.Secundary"
+      TitleSection="Em breve"
+      Jogos="@emBreve"
+    />
+
     <Footer />
 }
 

@@ -42,3 +42,27 @@
     width: 100%;
     margin: 0 auto;
 }
+
+.loading{
+		width: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+}
+
+.loadingPrimary{
+		background-color: #111;
+}
+
+.loadingSecundary {
+	background-color: #333;
+}
+
+.loadingPage {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #111;
+}

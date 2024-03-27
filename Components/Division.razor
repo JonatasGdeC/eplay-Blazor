@@ -4,7 +4,15 @@
     @if(typeDivision == TypeDivision.ForGames){
       <div class="games">
       @if(Jogos == null){
-         <p>Carregando...</p>   
+        @if(backgroundSection == BackgroundSection.Primary){
+           <div class="loading loadingSecundary">
+              <MudProgressCircular Style="height:50px;width:50px; color: #111" Indeterminate="true" />
+           </div>   
+        } else {
+            <div class="loading loadingPrimary">
+              <MudProgressCircular Style="height:50px;width:50px; color: #333" Indeterminate="true" />
+           </div> 
+        }
       } else{
         @foreach(Jogos jogo in Jogos){
           <CardGame
@@ -17,6 +25,7 @@
             DateLaunch="@jogo.release_date"
             Category="@jogo.details.category"
             System="@jogo.details.system"
+            Id="@jogo.id.ToString()"
           />
         }
       }

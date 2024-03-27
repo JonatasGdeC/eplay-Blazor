@@ -1,25 +1,55 @@
-@page "/produto"
+@page "/produto/{Id}"
+@inject HttpClient Http;
+
 <PageTitle>EPLAY - Nome do jogo</PageTitle>
 
-<Header/>
-<Hero/>
-<Division
-  TitleSection="Sobre o jogo"
-  typeDivision="Division.TypeDivision.ForTexts"
-  backgroundSection="Division.BackgroundSection.Secundary"
-  About="Hogwarts Legacy é um RPG de ação imersivo e de mundo aberto ambientado no mundo introduzido pela primeira vez nos livros do Harry Potter. Embarque em uma jornada por locais novos e familiares enquanto explora e descubra animais fantásticos, personalize seu personagem e crie poções, domine o lançamento de feitiços, aprimore talentos e torne-se o bruxo que deseja ser.Experimente Hogwarts da década de 1800. Seu personagem é um estudante com chave de um antigo segredo que ameaça destruir o mundo bruxo. Faça aliados, lute contra os bruxos das trevas e decida o destino do mundo bruxo. Seu legado é o que você faz dele. Viva o Inesperado." />
+@if(jogo == null)
+{
+    <div class="loadingPage">
+        <MudProgressCircular Style="height:150px;width:150px; color: #333" Indeterminate="true" />
+    </div>
+}
+else
+{
+    <Header />
+    <Hero BannerGame="@jogo[0]?.media.cover"
+          Category="@jogo[0]?.details.category"
+          System="@jogo[0]?.details.system"
+          NameGame="@jogo[0]?.name"
+          OldPrice="@jogo[0]?.prices.old"
+          NewPrice="@jogo[0]?.prices.current"
+          />
 
-<Division
-  TitleSection="Mais detalhes"
-  typeDivision="Division.TypeDivision.ForInfos"
-  System="Playstation 5"
-  Developer="Teste"
-  Publisher="Teste"
-/>
+    <Division TitleSection="Sobre o jogo"
+              typeDivision="Division.TypeDivision.ForTexts"
+              backgroundSection="Division.BackgroundSection.Secundary"
+              About="@jogo[0]?.description" />
 
-<Division
-  TitleSection="Galeria"
-  typeDivision="Division.TypeDivision.ForImages"
-  backgroundSection="Division.BackgroundSection.Secundary"
-/>
-<Footer/>
+    <Division TitleSection="Mais detalhes"
+              typeDivision="Division.TypeDivision.ForInfos"
+              System="@jogo[0]?.details.system"
+              Developer="@jogo[0]?.details.developer"
+              Publisher="@jogo[0]?.details.publisher"
+              Languages=@jogo[0]?.details.languages />
+
+    <Division TitleSection="Galeria"
+              typeDivision="Division.TypeDivision.ForImages"
+              backgroundSection="Division.BackgroundSection.Secundary" />
+
+    <Footer />
+}
+
+@code{
+  [Parameter]
+  public string? Id { get; set; }
+
+  private Jogos[]? jogo;
+
+  protected override async Task OnInitializedAsync()
+    {
+        var id = Id;
+
+        var jogoDetalhes = await Http.GetFromJsonAsync<Jogos>($"jogos/{id}");
+        jogo = new Jogos[] { jogoDetalhes };
+    }
+}

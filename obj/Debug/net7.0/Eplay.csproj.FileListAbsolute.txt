@@ -26,3 +26,17 @@ G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\obj\Debug\net7.0\refint\Eplay.d
 G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\obj\Debug\net7.0\Eplay.pdb
 G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\obj\Debug\net7.0\Eplay.genruntimeconfig.cache
 G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\obj\Debug\net7.0\ref\Eplay.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\obj\Debug\net7.0\Eplay.sourcelink.json
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.AspNetCore.Authorization.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.AspNetCore.Components.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Forms.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.AspNetCore.Components.Web.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.AspNetCore.Metadata.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.Extensions.Localization.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.Extensions.Localization.Abstractions.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.Extensions.Logging.Abstractions.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\Microsoft.JSInterop.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\bin\Debug\net7.0\MudBlazor.dll
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\obj\Debug\net7.0\Eplay.csproj.AssemblyReference.cache
+G:\Bitcube\Cursos\projetos\eplay-BlazorApp\Eplay\obj\Debug\net7.0\Eplay.csproj.Up2Date
