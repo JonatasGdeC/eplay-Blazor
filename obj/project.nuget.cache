@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "AIzx3vozc4HaMchjhdIceR19dsCw3uL5SC2kbMVXapJa89YEXPFjXb+xcVsDsZ2MjTzMRyJ4I/KHm/ycFZ6wxQ==",
+  "dgSpecHash": "+tiISRIuZWgIJzSdo4rJPqopuB421vFFDSY/cA6KqZqe9BHtc1wwu0zP3CcQwrZ5zH/8yzYuP990jKHBrX/v2w==",
   "success": true,
   "projectFilePath": "G:\\Bitcube\\Cursos\\projetos\\eplay-BlazorApp\\Eplay\\Eplay.csproj",
   "expectedPackageFiles": [
@@ -19,11 +19,7 @@
     "C:\\Users\\jonat\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\microsoft.jsinterop\\7.0.17\\microsoft.jsinterop.7.0.17.nupkg.sha512",
     "C:\\Users\\jonat\\.nuget\\packages\\mudblazor\\6.19.1\\mudblazor.6.19.1.nupkg.sha512",
-    "C:\\Users\\jonat\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512",
-    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.15\\microsoft.netcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.15\\microsoft.windowsdesktop.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.15\\microsoft.aspnetcore.app.ref.7.0.15.nupkg.sha512",
-    "C:\\Users\\jonat\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\7.0.15\\microsoft.netcore.app.host.win-x64.7.0.15.nupkg.sha512"
+    "C:\\Users\\jonat\\.nuget\\packages\\system.io.pipelines\\7.0.0\\system.io.pipelines.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }
