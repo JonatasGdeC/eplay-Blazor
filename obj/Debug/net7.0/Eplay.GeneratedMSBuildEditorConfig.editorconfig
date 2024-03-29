@@ -58,10 +58,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xUYWcucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = TWFpbkxheW91dC5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Pages/Categorias.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2F0ZWdvcmlhcy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
@@ -74,8 +70,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvZHV0by5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Shared/LoginDisplay.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXExvZ2luRGlzcGxheS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U2hhcmVkXE1haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
 [G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Areas/Identity/Pages/Account/LogOut.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcQWNjb3VudFxMb2dPdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Areas/Identity/Pages/Shared/_LoginPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcU2hhcmVkXF9Mb2dpblBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [G:/Bitcube/Cursos/projetos/eplay-BlazorApp/Eplay/Pages/_Host.cshtml]
