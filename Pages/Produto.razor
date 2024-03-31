@@ -1,0 +1,60 @@
+﻿@page "/produto/{NameGame}/{Id}"
+@inject HttpClient Http;
+
+@if(jogo == null)
+{
+    <PageTitle>EPLAY</PageTitle>
+    <div class="loadingPage">
+        <MudProgressCircular Style="height:150px;width:150px; color: #333" Indeterminate="true" />
+    </div>
+}
+else
+{
+    <PageTitle>EPLAY - @jogo[0]?.name</PageTitle>
+    <Header />
+    <Hero BannerGame="@jogo[0]?.media.cover"
+          Category="@jogo[0]?.details.category"
+          System="@jogo[0]?.details.system"
+          NameGame="@jogo[0]?.name"
+          OldPrice="@jogo[0]?.prices.old"
+          NewPrice="@jogo[0]?.prices.current"
+          />
+
+    <Division TitleSection="Sobre o jogo"
+              typeDivision="Division.TypeDivision.ForTexts"
+              backgroundSection="Division.BackgroundSection.Secundary"
+              About="@jogo[0]?.description" />
+
+    <Division TitleSection="Mais detalhes"
+              typeDivision="Division.TypeDivision.ForInfos"
+              System="@jogo[0]?.details.system"
+              Developer="@jogo[0]?.details.developer"
+              Publisher="@jogo[0]?.details.publisher"
+              Languages="@jogo[0]?.details.languages" />
+
+    <Division TitleSection="Galeria"
+              typeDivision="Division.TypeDivision.ForImages"
+              backgroundSection="Division.BackgroundSection.Secundary"
+              Gallery="@jogo[0]?.media.gallery"
+              BannerGame="@jogo[0]?.media.cover" />
+              
+    <Footer />
+}
+
+@code{
+    [Parameter]
+    public string? Id { get; set; }
+
+    [Parameter]
+    public string? NameGame { get; set; }
+
+  private Jogos[]? jogo;
+
+  protected override async Task OnInitializedAsync()
+    {
+        var id = Id;
+
+        var jogoDetalhes = await Http.GetFromJsonAsync<Jogos>($"jogos/{id}");
+        jogo = new Jogos[] { jogoDetalhes };
+    }
+}

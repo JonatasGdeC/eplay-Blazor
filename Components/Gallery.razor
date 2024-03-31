@@ -1,0 +1,174 @@
+﻿<div class="imgGallery" style="background-image: url(@ImgGame)" title="Clique aqui para abrir a imagem de @NameGame" @onclick="AbreModal">
+    <div class="overlay" />
+    @if (type == GalleryType.image)
+    {
+        <img class="iconZoom" src="./images/zoom.png" alt="Clique aqui para abrir a imagem" />
+    }
+    else
+    {
+        <img class="iconZoom" src="./images/play.png" alt="Clique aqui para abrir a imagem" />
+    }
+</div>
+
+<div class="@(modalOpen ? "modal" : "is--close")">
+    <div class="overlayModal" @onclick="FechaModal" />
+    <div class="modalContant">
+        <header>
+            <h4>@NameGame</h4>
+            <h4 class="btnClose" @onclick="FechaModal">X</h4>
+        </header>
+        @if (type == GalleryType.image)
+        {
+            <img src="@ImgGame" alt="Imagem de @NameGame" />
+        }
+        else
+        {
+            <iframe src="@LinkVideo" />
+        }
+    </div>
+</div>
+
+@code {
+    private bool modalOpen = false;
+
+    private void AbreModal()
+    {
+        modalOpen = true;
+    }
+
+    private void FechaModal()
+    {
+        modalOpen = false;
+    }
+
+    [Parameter]
+    public string? NameGame { get; set; }
+
+    [Parameter]
+    public string? ImgGame { get; set; }
+
+    public enum GalleryType
+    {
+        image,
+        video
+    }
+
+    [Parameter]
+    public GalleryType type { get; set; } = GalleryType.image;
+
+    [Parameter]
+    public string? LinkVideo { get; set; }
+}
+
+<style>
+    .imgGallery {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 150px;
+        height: 150px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border: 2px solid #fff;
+        border-radius: 8px;
+        transition: all ease 0.3s;
+        cursor: pointer;
+        .overlay
+
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 8px;
+        background-color: rgba(0, 0, 0, 0.7);
+        display: none;
+    }
+
+    .iconZoom {
+        z-index: 1;
+        display: none;
+    }
+
+    &:hover {
+        .overlay
+
+    {
+        display: block;
+    }
+
+    .iconZoom {
+        display: block;
+    }
+
+    }
+    }
+
+    .is--close {
+        display: none;
+    }
+
+    .modal {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transisiton: all ease 0.3s;
+        &.is--close
+
+    {
+        display: none;
+        scale: 0;
+    }
+
+    .overlayModal {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.73);
+        cursor: pointer;
+    }
+
+    .modalContant {
+        max-width: 960px;
+        position: relative;
+        z-index: 1;
+        header
+
+    {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 24px;
+        color: #fff;
+        h4
+
+    {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .btnClose {
+        cursor: pointer;
+    }
+
+    }
+
+    img, iframe {
+        max-width: 960px;
+        width: 100%;
+        height: 480px;
+        object-fit: cover;
+    }
+
+    }
+    }
+</style>

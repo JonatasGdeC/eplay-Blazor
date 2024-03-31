@@ -1,0 +1,36 @@
+﻿<button class="button" style="background-color: @(BackgroundColor == ButtonStyle.Primary ? "transparent" : "#10AC84")">
+	@TextButton
+</button>
+
+@code {
+	[Parameter]
+	public string? TextButton { get; set; }
+
+	public enum ButtonStyle
+	{
+		Primary,
+		Secondary
+	}
+
+	[Parameter]
+	public ButtonStyle BackgroundColor { get; set; } = ButtonStyle.Primary;
+}
+
+<style>
+	.button {
+		padding: 8px 16px;
+		border: 2px solid #fff;
+		border-radius: 8px;
+		color: #fff;
+		font-size: 16px;
+		font-weight: bold;
+		cursor: pointer;
+		transition: all ease 0.3s;
+		&:hover
+
+	{
+		opacity: 0.8;
+	}
+
+	}
+</style>

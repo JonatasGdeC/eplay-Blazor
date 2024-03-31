@@ -1,0 +1,161 @@
+﻿@using static eplay.Models.eplay.Jogos
+<div style="background-color: @(backgroundSection == BackgroundSection.Primary ? "#333" : "#111")">
+  <div class="container">
+    <h3 class="titleSection">@TitleSection</h3>
+    @if(typeDivision == TypeDivision.ForGames){
+      <div class="games">
+      @if(Jogos == null){
+        @if(backgroundSection == BackgroundSection.Primary){
+           <div class="loading loadingSecundary">
+              <MudProgressCircular Style="height:50px;width:50px; color: #111" Indeterminate="true" />
+           </div>   
+        } else {
+            <div class="loading loadingPrimary">
+              <MudProgressCircular Style="height:50px;width:50px; color: #333" Indeterminate="true" />
+           </div> 
+        }
+      } else{
+        @foreach(Jogos jogo in Jogos){
+          <CardGame
+            backgroundCard="backgroundSection"
+            ImageGame="@jogo.media.thumbnail"
+            NameGame="@jogo.name"
+            Description="@jogo.description"
+            Discount="@jogo.prices.discount"
+            Price="@jogo.prices.current"
+            DateLaunch="@jogo.release_date"
+            Category="@jogo.details.category"
+            System="@jogo.details.system"
+            Id="@jogo.id.ToString()"
+          />
+        }
+      }
+    </div>
+    }
+    @if(typeDivision == TypeDivision.ForTexts){
+      <p class="about">
+        @About
+      </p>
+    }
+    @if(typeDivision == TypeDivision.ForInfos){
+      <div class="about">
+        <p>
+          <b>Plataforma: </b>@System
+        </p>
+        <p>
+          <b>Desenvolvedor: </b>@Developer
+        </p>
+        <p>
+          <b>Editora: </b>@Publisher
+        </p>
+        <p>
+          <b>Idiomas: </b>O jogo oferece suporte a diversos idiomas, incluindo
+                @foreach(string language in Languages)
+                {
+                    <span>@language,&nbsp</span>
+                }
+          entre outros. As opções de áudio e legendas podem ser ajustadas nas configurações do jogo.
+        </p>
+      </div>
+    }
+    @if(typeDivision == TypeDivision.ForImages){
+      <div class="gallery">
+        @foreach(var item in Gallery){
+          if(item.type == "image"){
+            <Gallery ImgGame="@item.url" />
+          }
+          else{
+            <Gallery type="Components.Gallery.GalleryType.video" ImgGame="@BannerGame" LinkVideo="@item.url"/>
+          }
+        }
+      </div>
+    }
+  </div>
+</div>
+
+@code{
+    [Parameter]
+    public string? TitleSection { get; set; }
+
+    public enum BackgroundSection
+    {
+        Primary,
+        Secundary
+    }
+
+    [Parameter]
+    public BackgroundSection backgroundSection { get; set; } = BackgroundSection.Primary;
+
+    public enum TypeDivision
+    {
+        ForGames,
+        ForTexts,
+        ForInfos,
+        ForImages
+    }
+
+    [Parameter]
+    public TypeDivision typeDivision { get; set; } = TypeDivision.ForGames;
+
+    [Parameter]
+    public List<Jogos>? Jogos { get; set; }
+
+    [Parameter]
+    public string? About { get; set; }
+
+    [Parameter]
+    public string? System {get;set;}
+
+    [Parameter]
+    public string? Developer {get;set;}
+
+    [Parameter]
+    public string? Publisher {get; set;}
+
+    [Parameter]
+    public string[]? Languages {get; set;}
+
+    [Parameter]
+    public GalleryObject[]? Gallery { get; set; }
+
+    [Parameter]
+    public string? BannerGame { get; set; }
+}
+
+<style>
+  .titleSection{
+    font-size: 18px;
+    font-weight: bold;
+    padding: 32px 0 40px;
+    color: #fff;
+  }
+
+  .games{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    padding-bottom: 32px;
+
+    @@media(max-width: 1024px){
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @@media(max-width: 768px){
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .about{
+    padding-bottom: 32px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    color: #fff;
+  }
+
+  .gallery{
+    display: flex;
+    gap: 16px;
+    padding-bottom: 72px;
+  }
+</style>

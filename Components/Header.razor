@@ -1,0 +1,66 @@
+﻿<header class="header">
+    <div class="cardHeader">
+        <div class="linksHeader">
+            <h1>
+                <NavLink href="/">
+                    <img src="./images/eplay-logo.svg" alt="EPLAY" />
+                </NavLink>
+            </h1>
+            <ul>
+                <li>
+                    <NavLink href="/categorias">Categorias</NavLink>
+                </li>
+                <li>
+                    <NavLink href="/#em-breve">Em breve</NavLink>
+                </li>
+                <li>
+                    <NavLink href="/#promocoes">Promoções</NavLink>
+                </li>
+            </ul>
+        </div>
+        <div class="car">
+			<LoginDisplay />
+        </div>
+    </div>
+</header>
+
+<style>
+	.header {
+		background-color: #111;
+		padding: 40px 170px 80px;
+		color: #fff;
+
+		.cardHeader {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 22px 24px;
+			border-radius: 16px;
+			background-color: #333;
+		}
+
+		.linksHeader {
+			display: flex;
+			align-items: center;
+			gap: 40px;
+            
+			ul{
+				display: flex;
+				align-items: center;
+				gap: 16px;
+
+				li{
+					a{
+						color: #fff;
+						transition: all ease 0.3s;
+						opacity: 0.7;
+
+						&:hover{
+							opacity: 1;
+						}
+					}
+				}
+			}
+		}
+	}
+</style>

@@ -1,0 +1,54 @@
+﻿@page "/"
+@inject HttpClient Http;
+
+<PageTitle>EPLAY - A sua loja de Games</PageTitle>
+
+@if (jogosEmDestaque == null)
+{
+    <div class="loadingPage">
+      <MudProgressCircular Style="height:150px;width:150px; color: #333" Indeterminate="true" />
+    </div>
+}
+else
+{
+    <Header/>
+    <Banner
+      ImageGame="@jogosEmDestaque[0]?.media.cover"
+      NameGame="@jogosEmDestaque[0]?.name"
+      OldPrice="@jogosEmDestaque[0]?.prices.old"
+      NewPrice="@jogosEmDestaque[0]?.prices.current"
+      Id="@jogosEmDestaque[0]?.id.ToString()"
+    />
+
+    <div id="promocoes">
+      <Division
+        TitleSection="Promoções"
+        Jogos="@promocoes"
+      />
+    </div>
+
+    <div id="em-breve">
+      <Division
+        backgroundSection="Division.BackgroundSection.Secundary"
+        TitleSection="Em breve"
+        Jogos="@emBreve"
+      />
+    </div>
+
+    <Footer />
+}
+
+@code{
+    private Jogos[]? jogosEmDestaque;
+    private List<Jogos>? promocoes;
+    private List<Jogos>? emBreve;
+
+    protected override async Task OnInitializedAsync()
+    {
+        var jogoDestaque = await Http.GetFromJsonAsync<Jogos>("destaque");
+        jogosEmDestaque = new Jogos[] { jogoDestaque };
+
+        promocoes = await Http.GetFromJsonAsync<List<Jogos>>("promocoes");
+        emBreve = await Http.GetFromJsonAsync<List<Jogos>>("em-breve");
+    }
+}

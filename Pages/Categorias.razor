@@ -1,0 +1,61 @@
+﻿@page "/categorias"
+@inject HttpClient Http;
+<PageTitle>EPLAY - Categorias</PageTitle>
+
+<Header/>
+<div id="acao">
+  <Division
+    TitleSection="Ação"
+    Jogos="@jogosAcao"
+    backgroundSection="Division.BackgroundSection.Secundary"
+  />
+</div>
+
+<div id="esportes">
+  <Division
+    TitleSection="Esporte"
+    Jogos="@jogosEsportes"
+  />
+</div>
+
+<div id="luta">
+  <Division
+    TitleSection="Luta"
+    Jogos="@jogosLuta"
+    backgroundSection="Division.BackgroundSection.Secundary"
+  />
+</div>
+
+<div id="rpg">
+  <Division
+    TitleSection="RPG"
+    Jogos="@jogosRPG"
+  />
+</div>
+
+<div>
+  <Division
+    TitleSection="Simulação"
+    Jogos="@jogosSimulacao"
+    backgroundSection="Division.BackgroundSection.Secundary"
+  />
+</div>
+
+<Footer/>
+
+@code {
+    private List<Jogos>? jogosAcao;
+    private List<Jogos>? jogosEsportes;
+    private List<Jogos>? jogosLuta;
+    private List<Jogos>? jogosRPG;
+    private List<Jogos>? jogosSimulacao;
+
+    protected override async Task OnInitializedAsync()
+    {  
+        jogosAcao = await Http.GetFromJsonAsync<List<Jogos>>("acao");
+        jogosEsportes = await Http.GetFromJsonAsync<List<Jogos>>("esportes");
+        jogosLuta = await Http.GetFromJsonAsync<List<Jogos>>("luta");
+        jogosRPG = await Http.GetFromJsonAsync<List<Jogos>>("rpg");
+        jogosSimulacao = await Http.GetFromJsonAsync<List<Jogos>>("simulacao");
+    }
+}

@@ -1,0 +1,16 @@
+﻿<AuthorizeView>
+    <Authorized>
+        <a href="Identity/Account/Manage">Hello, @context.User.Identity?.Name!</a>
+        <p>0 - produtos</p>
+        <form method="post" action="Identity/Account/Logout">
+            <button type="submit" class="nav-link btn btn-link" title="Sair">
+                <MudIcon Icon="@Icons.Material.Filled.Logout" Size="Size.Medium" Color="Color.Default" Class="my-icon" />
+            </button>
+        </form>
+    </Authorized>
+    <NotAuthorized>
+        <a href="Identity/Account/Login" title="Login">
+            <MudIcon Icon="@Icons.Material.Filled.Login" Size="Size.Medium" Color="Color.Default" Class="my-icon" />
+        </a>
+    </NotAuthorized>
+</AuthorizeView>

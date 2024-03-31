@@ -1,0 +1,96 @@
+﻿@using static Components.Tag
+
+<div class="banner" style="background-image: url(@ImageGame)">
+    <div class="container">
+      <div class="tagBanner">
+          <Tag Size=TypeTag.Prymary Text="Destaque do dia"/>
+      </div>
+	  <div class="more_information">
+		  <div class="about_game">
+			  <h2>@NameGame</h2>
+			  <h4>
+                    <span>De @FormatUtils.ConverteValor(OldPrice)</span> <br />
+                    por apenas @FormatUtils.ConverteValor(NewPrice)
+			  </h4>
+		  </div>
+	  </div>
+      <a href="/produto/@NameGame/@Id">
+	    <Button TextButton="Aproveitar" BackgroundColor="Button.ButtonStyle.Primary" />
+      </a>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string? ImageGame { get; set; }
+    [Parameter]
+    public string? NameGame { get; set; }
+    [Parameter]
+    public double? OldPrice { get; set; }
+    [Parameter]
+    public double? NewPrice { get; set; }
+    [Parameter]
+    public string? Id { get; set; }
+}
+
+<style>
+	.banner {
+		width: 100%;
+		height: 560px;
+		display: block;
+		background-repeat: no-repeat;
+		background-size: cover;
+		font-weight: bold;
+		position: relative;
+
+		.container{
+			padding-top: 340px;
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-end;
+			z-index: 1;
+			color: #fff;
+
+			.tagBanner{
+				width: 156px;
+				position: absolute;
+				top: 32px;
+			}
+
+			.more_information{
+				display: flex;
+				justify-content: space-between;
+
+				.about_game{
+					width: 450px;
+
+					h2{
+						font-size: 36px;
+						font-weight: bold;
+						margin-bottom: 24px;
+					}
+
+					h4{
+						font-size: 24px;
+						font-weight: bold;
+
+						span {
+							text-decoration: line-through;
+						}
+					}
+				}
+			}
+		}
+
+		&::after{
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.7);
+			content: '';
+		}
+}
+</style>
